@@ -1,0 +1,6 @@
+Cypher is Neo4j’s graph query language that allows users
+to store and retrieve data from the graph database.
+Neo4j wanted to make querying graph data easy to learn, understand,
+and use for everyone, but also incorporate the power and functionality of
+other standard data access languages.
+This is what Cypher aims to accomplish.
