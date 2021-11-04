@@ -1,5 +1,8 @@
 package archetype.except.game;
 
+
+import archetype.except.game.exception.InvalidNumberException;
+
 import java.util.Random;
 import java.util.Scanner;
 
@@ -11,18 +14,14 @@ public class Game {
     public void run() {
         int number = RANDOM.nextInt(11);
         while (true) {
-            System.out.println("Input number: ");
             int inputNumber = SCANNER.nextInt();
             boolean check = false;
             try {
                 check = handler.check(number, inputNumber);
-                if (check) {
-                    break;
-                } else {
-                    System.out.println("Oops. Try again");
-                }
-            } catch (Exception e) {
-                System.out.println("not valid number");
+                if (check) break;
+                System.out.println("Try again");
+            } catch (InvalidNumberException e) {
+                System.out.println(e.getMessage());
             }
         }
         System.out.println("You won!");
