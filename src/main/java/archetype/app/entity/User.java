@@ -9,7 +9,7 @@ import java.util.UUID;
 @Data
 @AllArgsConstructor
 @ToString
-public class User {
+public class User extends Entity {
     private String userId;
     private String name;
     private String surname;
