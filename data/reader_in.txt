@@ -1,0 +1,6 @@
+During a complete installation of Oracle Database,
+the HR schema can be installed either manually or automatically when
+creating a database using the dbca option.
+All the other sample schemas must be installed manually
+via the scripts available on GitHub.
+This chapter contains the following topics:
