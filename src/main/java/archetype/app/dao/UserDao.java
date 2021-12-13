@@ -1,6 +1,7 @@
 package archetype.app.dao;
 
 import archetype.app.entity.User;
+import archetype.app.util.UserUtils;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -8,7 +9,12 @@ import java.util.Map;
 
 public class UserDao implements CommonDao<User>{
 
-    private final Map<String, User> users = new HashMap<>();
+    private static final Map<String, User> users = new HashMap<>();
+
+    static {
+        Map<String, User> stringUserMap = UserUtils.readDataFromFile("data/user.csv");
+        users.putAll(stringUserMap);
+    }
 
     @Override
     public User save(User user) {

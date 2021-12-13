@@ -2,13 +2,13 @@ package archetype.app.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.ToString;
+import lombok.EqualsAndHashCode;
 
 import java.util.UUID;
 
+@EqualsAndHashCode(callSuper = true)
 @Data
 @AllArgsConstructor
-@ToString
 public class User extends Entity {
     private String userId;
     private String name;
@@ -19,4 +19,5 @@ public class User extends Entity {
         userId = UUID.randomUUID().toString();
     }
 }
+
 // S O L I D

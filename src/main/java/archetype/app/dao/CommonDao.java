@@ -1,7 +1,6 @@
 package archetype.app.dao;
 
 import archetype.app.entity.Entity;
-import lombok.Data;
 
 import java.util.Collection;
 
@@ -15,14 +14,15 @@ public interface CommonDao<T extends Entity> {
 
     void delete(String id);
 }
-@Data
-class Order extends Entity {
-    private String name;
-}
-@Data
-class Car extends Entity {
-    private String model;
-}
-class Shop{
-    // ....
-}
+//
+//@Data
+//class Order extends Entity{
+//    private String name;
+//}
+//@Data
+//class Car extends Entity {
+//    private String model;
+//}
+//class Shop{
+//    // ....
+//}
