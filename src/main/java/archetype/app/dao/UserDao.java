@@ -12,7 +12,7 @@ public class UserDao implements CommonDao<User>{
     private static final Map<String, User> users = new HashMap<>();
 
     static {
-        Map<String, User> stringUserMap = UserUtils.readDataFromFile("data/user.csv");
+        Map<String, User> stringUserMap = UserUtils.readDataFromFile("data/users.csv");
         users.putAll(stringUserMap);
     }
 
