@@ -15,5 +15,17 @@ public class DemoNestedClasses {
         owners.sort(comparator);
         System.out.println(owners);
 
+        Phone phone = new Phone.PhoneBuilder()
+                .setId(1)
+                .setModel("Galaxy A-35")
+                .setCompany("Samsung")
+                .setCost(5.999)
+                .setRem(8)
+                .setDisplay(9.0)
+                .setCountry("China")
+                .build();
+
+        System.out.println(phone);
+
     }
 }

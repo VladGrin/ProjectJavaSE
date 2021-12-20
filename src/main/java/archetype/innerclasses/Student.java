@@ -17,7 +17,7 @@ public class Student {
 
     @Data
     @NoArgsConstructor
-    public class Address {
+    class Address {
         private String city;
         private String street;
         private int houseId;
